@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplicación CRUD</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <h1>Lista de Elementos</h1>
+    <div>
+    <ul>
+      <% items.forEach((items) => { %>
+      <li>
+        <span><%= items.nombre %></span>
+        <span><%= items.frase %>
+          <a href="/actualizar/<%= items._id %>">Editar</a></span>
+      </li>
+      <% }); %>
+    </ul>
+  </div>
+    <form action="/agregar" method="POST">
+      <input type="text" name="nombre" placeholder="Autor" required />
+      <input type="text" name="frase" placeholder="Frase" required />
+      <button class="agregar" type="submit">Agregar</button>
+    </form>
+    <form action="/eliminar" method="POST">
+      <input
+        type="text"
+        name="elementId"
+        placeholder="ID del elemento a eliminar"
+      />
+      <button class="eliminar" type="submit">Eliminar</button>
+    </form>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    color: #000000;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    max-width: 500px;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+li {
+    padding: 10px;
+    border: solid 0.5px #000000;
+    color: rgb(0, 3, 3);
+    text-align: left;
+    margin: 10px 0;
+    justify-content: left;
+    background-color: #99c1fd;
+}
+
+a{
+  background-color: #4caf50;
+  border: solid 0.5px #000000;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+form {
+    margin: 20px;
+    float: center;
+}
+
+input {
+    padding: 5px;
+    margin: 5px;
+}
+  
+.agregar {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.eliminar {
+    background-color: #e00d0d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+    </style>
+  </body>
+</html>

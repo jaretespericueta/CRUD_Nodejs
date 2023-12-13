@@ -1,0 +1,36 @@
+<h1>Editar Registros</h1>
+<form action="/actualizar/<%= items._id %>" method="post">
+    <input type="text" name="nombre" placeholder="Autor" value="<%= items.nombre %>">
+    <input type="text" name="frase" placeholder="Frase" value="<%= items.frase %>">
+    <button type="submit">Guardar</button>
+</form>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        text-align: center;
+    }
+    
+    h1 {
+        font-size: 24px;
+        color: #000000;
+    } 
+    
+    form {
+        margin: 20px;
+        float: center;
+    }
+    
+    input {
+        padding: 5px;
+        margin: 5px;
+    }
+      
+    button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+    }
+        </style>

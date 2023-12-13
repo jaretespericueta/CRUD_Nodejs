@@ -1,0 +1,6 @@
+<h1>Editar Registros</h1>
+<form action="/actualizar/<%= items._id %>" method="post">
+    <input type="text" name="nombre" placeholder="Autor" value="<%= items.nombre %>">
+    <input type="text" name="frase" placeholder="Frase" value="<%= items.frase %>">
+    <button type="submit">Guardar</button>
+</form>

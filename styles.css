@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #000000;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    border: 1px solid #9b1d1d;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #0a0909;
+}
+
+form {
+    margin: 20px 0;
+}
+
+input {
+    padding: 5px;
+    margin: 5px;
+}
+  
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
